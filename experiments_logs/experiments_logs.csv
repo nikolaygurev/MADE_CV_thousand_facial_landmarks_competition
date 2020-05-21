@@ -1,0 +1,28 @@
+;Description;;Dataset;;;;;Model;;;Training process;;;Training result;;;;Kaggle;;;;
+;"Description (white and grey colours show  experiment groups – for convenience only)";"File with scores (same files mean exactly the same model training)";"Split into train/validation (old is not shuffled, new is shuffled)";"Train random fraction of all train data";"Validation random fraction of all validation data";"Version (same values mean exactly the same dataset)";Batch size;Model;Is pretrained;Trainable parameters;Optimizer;Lr scheduler;N_epochs;"Best epoch (0 <= x <= N_epoch – 1)";Best validation score;"Approximate train time (sec/epoch)";"Approximate validation time (sec/epoch)";Private score;Public score;"Is submit correct rounding (np.around().astype(np.int) instead of astype(np.int))";Submit name;Is late submit
+0;Resnet18 first approach;–;Old;0.1;0.1;V1;512;resnet18;True;all;Adam(0.001);–;1;0;–;–;–;1494.53465;1504.53696;False;1_baseline_submit.csv;False
+1;Resnet18 first approach;–;Old;0.1;0.1;V1;512;resnet18;True;all;Adam(0.001);–;20;–;–;–;–;19.13296;18.9815;False;2_submit.csv;False
+2;Resnet18 first approach;–;Old;0.1;0.1;V1;512;resnet18;True;all;Adam(0.001);–;40;–;–;–;–;15.26668;15.55896;False;3_submit.csv;False
+3;Resnet18 first approach;–;Old;0.1;0.1;V1;512;resnet18;True;all;Adam(0.001);–;60;–;–;–;–;13.87672;14.21123;False;4_submit.csv;False
+4;Resnet18 baseline on full dataset;01.txt;Old;1.0;1.0;Full_old;512;resnet18;True;all;Adam(0.001);–;20;18;1.990;–;–;10.32738;10.65614;False;5_submit.csv;False
+5;Resnet18 baseline on full dataset;01.txt;Old;1.0;1.0;Full_old;512;resnet18;True;all;Adam(0.001);–;40;34;1.784;–;–;10.28588;10.56043;False;6_submit.csv;False
+6;Resnet18 baseline on small dataset;02.txt;New;0.3;0.5;V2;512;resnet18;True;all;Adam(0.001);–;40;39;2.310;–;–;12.55843;12.88942;False;7_submit.csv;False
+7;Train only last fc of resnet18;03.txt;New;0.3;0.5;V3;512;resnet18;True;only last fc;Adam(0.001);–;20;19;159.058;–;–;–;–;–;–;–
+8;Not pretrained resnet18;04.txt;New;0.3;0.5;V4;512;resnet18;False;all;Adam(0.001);–;20;19;2.773;–;–;14.73311;15.05889;False;8_submit.csv;False
+9;Mobile network mnasnet1_0;05.txt;New;0.3;0.5;V5;512;mnasnet1_0;True;all;Adam(0.001);–;35;33;19.875;–;–;–;–;–;–;–
+10;Resnet34 baseline on full dataset;06.txt;New;1.0;1.0;Full_new;512;resnet34;True;all;Adam(0.001);–;40;39;1.659;474;106;9.83134;9.99426;False;9_submit.csv;False
+11;Resnet50 baseline on full dataset;07.txt;New;1.0;1.0;Full_new;512;resnet50;True;all;Adam(0.001);–;40;33;1.648;618;106;9.86421;9.97041;False;10_submit.csv;False
+12;Use no lr_scheduler;08.txt;New;0.3;0.5;V6;512;resnet18;True;all;Adam(0.001);–;40;37;2.257;128;50;–;–;–;–;–
+13;Use lr_scheduler with gamma 0.1;09.txt;New;0.3;0.5;V6;512;resnet18;True;all;Adam(0.01);StepLR(step_size=10, gamma=0.1);40;38;2.566;123;48;–;–;–;–;–
+14;Use lr_scheduler with gamma 0.2;10.txt;New;0.3;0.5;V6;512;resnet18;True;all;Adam(0.01);StepLR(step_size=10, gamma=0.2);40;38;2.368;128;50;–;–;–;–;–
+15;Compare batch sizes;11.txt;New;0.3;0.5;V7;1024;resnet18;True;all;Adam(0.001);–;40;39;2.518;115;46;–;–;–;–;–
+16;Compare batch sizes;12.txt;New;0.3;0.5;V7;512;resnet18;True;all;Adam(0.001);–;40;36;2.259;120;46;–;–;–;–;–
+17;Compare batch sizes;13.txt;New;0.3;0.5;V7;256;resnet18;True;all;Adam(0.001);–;40;37;2.116;120;59;–;–;–;–;–
+18;Compare batch sizes, compare submit rounding;14.txt;New;0.3;0.5;V7;128;resnet18;True;all;Adam(0.001);–;40;39;2.009;135;52;11.19398;11.47711;False;11_submit.csv;False
+19;Submit error;14.txt;New;0.3;0.5;V7;128;resnet18;True;all;Adam(0.001);–;40;39;2.009;135;52;–;–;False;12_submit.csv;False
+20;Compare batch sizes, compare submit rounding;14.txt;New;0.3;0.5;V7;128;resnet18;True;all;Adam(0.001);–;40;39;2.009;135;52;10.77648;11.05128;True;13_submit.csv;False
+21;Compare batch sizes;15.txt;New;0.3;0.5;V7;64;resnet18;True;all;Adam(0.001);–;40;34;1.956;142;54;–;–;–;–;–
+23;Resnet101 final – final leaderboard solution;16.txt;New;1.0;1.0;Full_new;64;resnet101;True;all;Adam(0.001);–;20;19;1.523;1430;124;9.02328;9.13321;True;14_submit.csv;False
+24;Resnet101 final;16.txt;New;1.0;1.0;Full_new;64;resnet101;True;all;Adam(0.001);–;33;23;1.522;1430;124;8.91534;9.13772;True;15_submit.csv;True
+22;Resnet50 final;17.txt;New;1.0;1.0;Full_new;128;resnet50;True;all;Adam(0.001);–;40;25;1.555;694;114;9.13478;9.34510;True;16_submit.csv;True
+25;Xception;18.txt;New;1.0;1.0;Full_new;64;xception;True;all;Adam(0.001);–;40;35;1.809;968;111;10.23051;10.50590;True;17_submit.csv;True

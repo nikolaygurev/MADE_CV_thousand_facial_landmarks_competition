@@ -1,0 +1,20 @@
+Epoch # 0:	train loss: 821.628	val loss: 45.867
+Epoch # 1:	train loss: 37.392	val loss: 36.482
+Epoch # 2:	train loss: 22.067	val loss:  21.5
+Epoch # 3:	train loss: 19.354	val loss: 15.629
+Epoch # 4:	train loss: 9.238	val loss: 8.934
+Epoch # 5:	train loss: 6.154	val loss: 6.645
+Epoch # 6:	train loss: 5.242	val loss:  5.62
+Epoch # 7:	train loss: 4.611	val loss: 4.628
+Epoch # 8:	train loss: 4.156	val loss: 4.412
+Epoch # 9:	train loss: 3.847	val loss: 3.894
+Epoch #10:	train loss: 3.585	val loss: 3.815
+Epoch #11:	train loss: 3.343	val loss: 3.445
+Epoch #12:	train loss: 3.168	val loss: 3.353
+Epoch #13:	train loss:  3.01	val loss:  3.91
+Epoch #14:	train loss:  2.86	val loss: 3.128
+Epoch #15:	train loss: 2.716	val loss: 3.166
+Epoch #16:	train loss: 2.588	val loss: 2.874
+Epoch #17:	train loss: 2.478	val loss: 2.979
+Epoch #18:	train loss: 2.377	val loss: 2.797
+Epoch #19:	train loss: 2.357	val loss: 2.773
