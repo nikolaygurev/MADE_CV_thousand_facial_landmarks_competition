@@ -6,4 +6,5 @@ __pycache__/
 data.zip
 data/
 kaggle.json
+resnet101_batch_64_test_predictions.pkl
 venv/
